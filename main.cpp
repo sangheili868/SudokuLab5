@@ -18,6 +18,19 @@ int main()
 	cout<<"Enter the filename."<<endl;
 	cin>>filename;
 	Puzzle<char> myPuzzle(filename);
+	Puzzle<int> intPuzzle(filename);
+
+	cout<<"Puzzle stored as integer:"<<endl;
+	intPuzzle.display();
+	cout<<"Puzzle stored as char: "<<endl;
+
+	// Check if puzzle is already full
+	if(myPuzzle.checkWin())
+	{
+	  myPuzzle.display();
+	  cout<<"Woah! The puzzle was already complete! Good for you!"<<endl;
+	  return 1;
+	}
 
 	while(1)	// Primary Game Loop
 	{ 
