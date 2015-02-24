@@ -1,0 +1,22 @@
+CMP = g++
+MAIN = main
+FUNC = Puzzle
+EXEC = $(MAIN)
+EXEC2 = $(MAIN2)
+EXEC3 = $(MAIN3)
+FLAGS = -lm -lX11
+
+all:	$(MAIN)
+
+$(EXEC): $(MAIN).o $(FUNC).o
+	$(CMP) $(MAIN).o $(FUNC).o $(FLAGS) -o $(EXEC)
+
+$(MAIN).o: $(MAIN).cpp $(FUNC).h
+	$(CMP) -c $(MAIN).cpp
+
+$(FUNC).o: $(FUNC).h
+	$(CMP) -c $(FUNC).h
+
+clean:
+	rm *.o $(EXEC)
+ 

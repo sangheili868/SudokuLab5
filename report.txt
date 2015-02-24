@@ -1,0 +1,5 @@
+Chris Maheu
+Lab 5 Report
+Sudoku Game
+
+	When running this program, the user is first asked to import a sudoku game. Any text file of a nine-by-nine grid
